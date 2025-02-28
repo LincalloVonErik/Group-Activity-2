@@ -1,1 +1,31 @@
 
+#include <iostream>
+using namespace std;
+
+void checkNumber(int num) {
+    // Check if number is even or odd
+    string parity = (num % 2 == 0) ? "even" : "odd";
+
+    // Check if number is positive, negative, or zero
+    string sign;
+    if (num > 0) {
+        sign = "positive";
+    } else if (num < 0) {
+        sign = "negative";
+    } else {
+        sign = "zero";
+    }
+
+    // Print the result
+    cout << "The number " << num << " is " << parity << " and " << sign << ".";
+}
+
+int main() {
+    int num;
+    cout << "Enter an integer: ";
+    cin >> num;
+
+    checkNumber(num);
+
+    return 0;
+}
